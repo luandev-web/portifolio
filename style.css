@@ -999,6 +999,35 @@ img {
   border-radius: 0;
   transition: var(--transition);
 }
+.portfolio-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-thumb {
+  position: relative;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 .portfolio-link:hover .portfolio-logo img {
   transform: scale(1.05);
@@ -1008,25 +1037,24 @@ img {
 .portfolio-live {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.7rem;
+  gap: 6px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--green);
-  background: var(--green-glow);
-  padding: 3px 10px;
+  color: #22c55e; /* verde fixo */
+  background: rgba(34, 197, 94, 0.15);
+  padding: 5px 12px;
   border-radius: 50px;
-  margin-left: 8px;
-  vertical-align: middle;
+  margin: 10px 0;
 }
 
 .portfolio-live i {
-  font-size: 0.45rem;
+  font-size: 0.5rem;
   animation: blink-live 1.5s infinite;
 }
 
 @keyframes blink-live {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  50% { opacity: 0.4; }
 }
 
 /* ============================================
